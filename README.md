@@ -7,13 +7,13 @@ PyTorch implementation of the paper [KERPLE: Kernelized Relative Positional Embe
 2. We remove the .github/ folder as it is not needed in our experiments.
 3. The original gpt-neox readme is renamed as README_gpt_neox.md.
 4. The config files used in our experiments are stored in kerple_configs/.
-5. The two proposed positional embeddings are called ParallelKerplePower and ParallelKerpleLog in this repository. A simple grep will point you to our implementation.
+5. The two proposed positional embeddings are called **ParallelKerplePower** and **ParallelKerpleLog** in this repository. A simple grep will point you to our implementation.
 
 ## Installation
 Please refer to the original readme README_gpt_neox.md for details. We use the Host Setup without fused kernels.
 
 ## Data Preparation
-Warning: These datasets are huge! Please make sure you have at least 250 GB of disk space before download them all.
+Warning: These datasets are huge! Please make sure you have at least **250 GB** of disk space before download them all.
 
 We use the three preconfigured datasets in the orignal gpt-neox repository:
 ```
@@ -39,3 +39,9 @@ bash test.sh
 ```
 
 ## Pretrained Models
+We release 6 pretrained checkpoints: **kerple_log** and **kerple_power** pretrained on the above three datasets.
+
+1. Please navigate to [**Releases**](https://github.com/chijames/KERPLE/releases) to download the checkpoints.
+2. You can right click on the filename, copy link address, and use wget to download it directly in a command line environment.
+3. Once the files are downloaded, unzip them and leave them in the current directory.
+4. Run *test.sh*, and the extrapolation performance should be very close to the numbers reported in Table 3 of the paper.
